@@ -1,0 +1,3 @@
+name: module-local-path-provisioner
+runtime: nodejs
+description: "Module: local-path-provisioner"
