@@ -3,7 +3,7 @@ import { LocalPathProvisioner, PolicyType } from './lib'
 
 const config = new pulumi.Config()
 
-const resource = new LocalPathProvisioner('local-path-provisioner', {
+new LocalPathProvisioner('local-path-provisioner', {
   namespaceName: config.get('namespaceName') || 'default',
   path: config.require('path'),
   policy: config.require<PolicyType>('policy'),

@@ -1,6 +1,5 @@
 import * as k8s from '@pulumi/kubernetes'
 import * as pulumi from '@pulumi/pulumi'
-import { resolve } from 'path'
 
 export type PolicyType = 'Delete' | 'Retain'
 
@@ -23,7 +22,10 @@ export class LocalPathProvisioner extends pulumi.ComponentResource {
     this.chart = new k8s.helm.v3.Chart(
       name,
       {
-        path: resolve('./assets/charts/local-path-provisioner'),
+        chart: 'local-path-provisioner',
+        fetchOpts: {
+          repo: 'https://vizv-pulumi.github.io/helm-charts',
+        },
         namespace: args.namespaceName,
         values: {
           image: {

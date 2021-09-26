@@ -14,10 +14,9 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "tsc",
-    "postbuild": "cp -av assets dist/",
     "prepack": "npm run build",
     "postpack": "rm -rf dist"
   },
   "types": "./dist/index.d.ts",
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
