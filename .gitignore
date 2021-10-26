@@ -18,9 +18,7 @@
 .vscode/
 
 # Project
-/bin/
 /node_modules/
-/crds/
 /dist/
 /Pulumi.*.yaml
 /*.tgz
