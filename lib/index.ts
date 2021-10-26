@@ -17,7 +17,7 @@ export class LocalPathProvisioner extends pulumi.ComponentResource {
     args: LocalPathProvisionerArgs,
     opts?: pulumi.ComponentResourceOptions,
   ) {
-    super('vizv:foundation:LocalPathProvisioner', name, {}, opts)
+    super('vizv:module:LocalPathProvisioner', name, {}, opts)
 
     this.chart = new k8s.helm.v3.Chart(
       name,
